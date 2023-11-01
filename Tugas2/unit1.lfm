@@ -1,0 +1,171 @@
+object Form1: TForm1
+  Left = 313
+  Height = 254
+  Top = 31
+  Width = 285
+  Caption = 'Perhitungan Barang'
+  ClientHeight = 254
+  ClientWidth = 285
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -11
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnCreate = FormCreate
+  object EQTY: TEdit
+    Left = 137
+    Height = 21
+    Top = 66
+    Width = 100
+    OnChange = EQTYChange
+    TabOrder = 0
+  end
+  object CBKode: TComboBox
+    Left = 137
+    Height = 21
+    Top = 40
+    Width = 100
+    ItemHeight = 13
+    ItemIndex = 0
+    Items.Strings = (
+      'Pilih'
+      'A01'
+      'B02'
+      'C03'
+      'D04'
+    )
+    OnChange = CBKodeChange
+    TabOrder = 1
+    Text = 'Pilih'
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 13
+    Top = 44
+    Width = 67
+    Caption = 'Kode Barang'
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 13
+    Top = 72
+    Width = 45
+    Caption = 'Quantity'
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 13
+    Top = 96
+    Width = 71
+    Caption = 'Nama Barang'
+  end
+  object ENama: TEdit
+    Left = 137
+    Height = 21
+    Top = 92
+    Width = 100
+    OnChange = ENamaChange
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Left = 33
+    Height = 13
+    Top = 120
+    Width = 70
+    Caption = 'Harga Satuan'
+  end
+  object EHarga: TEdit
+    Left = 137
+    Height = 21
+    Top = 118
+    Width = 100
+    OnChange = EHargaChange
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    Left = 33
+    Height = 13
+    Top = 146
+    Width = 48
+    Caption = 'Sub Total'
+  end
+  object ESubTotal: TEdit
+    Left = 137
+    Height = 21
+    Top = 144
+    Width = 100
+    OnChange = ESubTotalChange
+    TabOrder = 4
+  end
+  object Label6: TLabel
+    Left = 33
+    Height = 13
+    Top = 173
+    Width = 36
+    Caption = 'Diskon'
+  end
+  object EDiskon: TEdit
+    Left = 137
+    Height = 21
+    Top = 169
+    Width = 100
+    OnChange = EDiskonChange
+    TabOrder = 5
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 23
+    Top = 8
+    Width = 242
+    Caption = 'Perhitungan Penjualan Barang'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Impact'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnHitung: TButton
+    Left = 8
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'Hitung'
+    OnClick = btnHitungClick
+    TabOrder = 6
+  end
+  object btnUlang: TButton
+    Left = 104
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'Ulang'
+    OnClick = btnUlangClick
+    TabOrder = 7
+  end
+  object btnKeluar: TButton
+    Left = 192
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'Keluar'
+    OnClick = btnKeluarClick
+    TabOrder = 8
+  end
+  object ETotal: TEdit
+    Left = 136
+    Height = 21
+    Top = 195
+    Width = 101
+    OnChange = ETotalChange
+    TabOrder = 9
+  end
+  object Label8: TLabel
+    Left = 32
+    Height = 13
+    Top = 198
+    Width = 25
+    Caption = 'Total'
+  end
+end

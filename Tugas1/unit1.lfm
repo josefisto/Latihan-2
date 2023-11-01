@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 324
+  Height = 350
+  Top = 31
+  Width = 343
+  Caption = 'PT Nusa Indah'
+  ClientHeight = 350
+  ClientWidth = 343
+  OnCreate = FormCreate
+  object Label1: TLabel
+    Left = 39
+    Height = 15
+    Top = 37
+    Width = 79
+    Caption = 'Nama Pegawai'
+  end
+  object Label2: TLabel
+    Left = 39
+    Height = 15
+    Top = 72
+    Width = 40
+    Caption = 'Jabatan'
+  end
+  object Label3: TLabel
+    Left = 39
+    Height = 15
+    Top = 104
+    Width = 56
+    Caption = 'Gaji Pokok'
+  end
+  object edtNama: TEdit
+    Left = 140
+    Height = 23
+    Top = 29
+    Width = 176
+    Anchors = []
+    TabOrder = 0
+    Text = 'Nama'
+  end
+  object edtGapok: TEdit
+    Left = 139
+    Height = 23
+    Top = 95
+    Width = 176
+    Anchors = []
+    OnChange = edtGapokChange
+    TabOrder = 1
+    Text = 'Gapok'
+  end
+  object Label4: TLabel
+    Left = 39
+    Height = 15
+    Top = 208
+    Width = 91
+    Caption = 'Status Tunjangan'
+  end
+  object edtTunjangan: TEdit
+    Left = 140
+    Height = 23
+    Top = 200
+    Width = 176
+    OnChange = edtTunjanganChange
+    TabOrder = 2
+    Text = 'Tunjangan'
+  end
+  object btnHitung: TButton
+    Left = 39
+    Height = 25
+    Top = 232
+    Width = 277
+    Caption = 'Total Gaji'
+    OnClick = btnHitungClick
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    Left = 39
+    Height = 15
+    Top = 280
+    Width = 55
+    Caption = 'Gaji Bersih'
+  end
+  object edtTotalGaji: TEdit
+    Left = 140
+    Height = 23
+    Top = 272
+    Width = 176
+    TabOrder = 4
+    Text = 'Total Gaji'
+  end
+  object btnClear: TButton
+    Left = 39
+    Height = 25
+    Top = 312
+    Width = 137
+    Caption = 'Isi Data Lagi'
+    OnClick = btnClearClick
+    TabOrder = 5
+  end
+  object btnClose: TButton
+    Left = 185
+    Height = 25
+    Top = 312
+    Width = 131
+    Caption = 'Close'
+    OnClick = btnCloseClick
+    TabOrder = 6
+  end
+  object cbJabatan: TComboBox
+    Left = 139
+    Height = 23
+    Top = 62
+    Width = 176
+    Anchors = []
+    ItemHeight = 15
+    Items.Strings = (
+      'Direktur'
+      'Manajer'
+      'Karyawan'
+    )
+    OnChange = cbJabatanChange
+    TabOrder = 7
+    Text = 'Jabatan'
+  end
+  object rgStatus: TRadioGroup
+    Left = 39
+    Height = 50
+    Top = 136
+    Width = 274
+    AutoFill = True
+    Caption = 'Status'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclTopToBottomThenLeftToRight
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 30
+    ClientWidth = 270
+    ColumnLayout = clVerticalThenHorizontal
+    OnClick = rgStatusClick
+    TabOrder = 8
+    object Honorer: TRadioButton
+      Left = 6
+      Height = 30
+      Top = 0
+      Width = 137
+      Caption = 'Honorer'
+      OnChange = HonorerChange
+      TabOrder = 0
+    end
+    object Tetap: TRadioButton
+      Left = 143
+      Height = 30
+      Top = 0
+      Width = 121
+      Caption = 'Tetap'
+      OnChange = TetapChange
+      TabOrder = 2
+    end
+  end
+end
